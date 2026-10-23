@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the AGN Services Technician Network | AGN Services LLC</title>
+<meta name="description" content="Independent home-service technicians: join AGN Services LLC and get steady jobs in your area.">
+<style>
+:root{--blue:#1d4ed8;--blue-d:#1e3a8a;--blue-l:#eff6ff;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--err:#dc2626;--ok:#16a34a;--r:12px}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Helvetica,Arial,sans-serif;color:var(--ink);background:#f8fafc;line-height:1.5;-webkit-font-smoothing:antialiased}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.brand .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;display:grid;place-items:center;font-size:14px;letter-spacing:.02em}
+.brand b{color:var(--blue)} .brand span.llc{font-weight:600;color:var(--muted);font-size:14px;margin-left:2px}
+.nav small{color:var(--muted);font-size:13px}
+.hero{background:radial-gradient(1200px 400px at 20% -10%,#3b82f6 0,transparent 60%),linear-gradient(160deg,#1e40af,#1e3a8a 70%);color:#fff;padding:56px 0 120px}
+.hero h1{font-size:clamp(30px,6vw,48px);line-height:1.1;letter-spacing:-.03em;margin:0 0 14px;max-width:720px}
+.hero p{font-size:clamp(16px,2.4vw,19px);color:#dbeafe;margin:0;max-width:620px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badges span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;font-size:14px}
+main .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px -20px rgba(15,23,42,.25);padding:28px;margin:-84px auto 40px;max-width:760px;position:relative}
+.card h2{margin:0 0 4px;font-size:22px;letter-spacing:-.02em}
+.card .sub{margin:0 0 22px;color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.full{grid-column:1/-1}
+.field > label:not(.consent):not(.drop),.flabel{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+.opt{color:var(--muted);font-weight:400}
+input[type=text],input[type=email],input[type=tel]{width:100%;height:48px;border:1.5px solid var(--line);border-radius:var(--r);padding:0 14px;font-size:16px;color:var(--ink);background:#fff;transition:border-color .15s,box-shadow .15s;font-family:inherit}
+input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(29,78,216,.15)}
+.hint{font-size:13px;color:var(--muted);margin-top:6px}
+.error{font-size:13px;color:var(--err);margin-top:6px;display:none}
+.invalid .error{display:block}
+.invalid input[type=text],.invalid input[type=email],.invalid input[type=tel],.invalid .box,.invalid .drop{border-color:var(--err)}
+.box{border:1.5px solid var(--line);border-radius:var(--r);padding:6px;min-height:48px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:#fff;cursor:text;position:relative}
+.box:focus-within{border-color:var(--blue);box-shadow:0 0 0 4px rgba(29,78,216,.15)}
+.box input{border:0!important;box-shadow:none!important;height:34px!important;flex:1;min-width:140px;padding:0 8px!important}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--blue-l);color:var(--blue-d);border:1px solid #bfdbfe;border-radius:999px;padding:4px 6px 4px 12px;font-size:14px;font-weight:500}
+.chip button{border:0;background:#dbeafe;color:var(--blue-d);width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:15px;line-height:1;display:grid;place-items:center}
+.chip button:hover{background:#bfdbfe}
+.combo{position:relative}
+.menu{position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 16px 40px -12px rgba(15,23,42,.3);max-height:260px;overflow:auto;z-index:20;display:none;padding:6px}
+.menu.open{display:block}
+.menu div{padding:10px 12px;border-radius:8px;cursor:pointer;font-size:15px}
+.menu div.active,.menu div:hover{background:var(--blue-l);color:var(--blue-d)}
+.menu mark{background:none;color:var(--blue);font-weight:700}
+.menu .empty{color:var(--muted);cursor:default}
+.inds{display:flex;flex-wrap:wrap;gap:10px}
+.inds label{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer;font-size:15px;font-weight:500;user-select:none;transition:.15s}
+.inds input{position:absolute;opacity:0;pointer-events:none}
+.inds .tick{width:18px;height:18px;border-radius:5px;border:1.5px solid #94a3b8;display:grid;place-items:center;font-size:12px;color:#fff}
+.inds label:has(input:checked){border-color:var(--blue);background:var(--blue-l);color:var(--blue-d)}
+.inds label:has(input:checked) .tick{background:var(--blue);border-color:var(--blue)}
+.inds label:has(input:checked) .tick::after{content:"✓"}
+.inds label:has(input:focus-visible){box-shadow:0 0 0 4px rgba(29,78,216,.15)}
+.invalid .inds label{border-color:#fecaca}
+.field .drop{border:1.5px dashed #cbd5e1;border-radius:var(--r);padding:16px;display:flex;align-items:center;gap:14px;cursor:pointer;background:#fbfdff;transition:.15s;position:relative}
+.drop:hover,.drop.drag{border-color:var(--blue);background:var(--blue-l)}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop .ic{width:42px;height:42px;border-radius:10px;background:var(--blue-l);color:var(--blue);display:grid;place-items:center;flex:none}
+.drop strong{display:block;font-size:15px}
+.drop small{color:var(--muted);font-size:13px;word-break:break-all}
+.drop.has{border-style:solid;border-color:#86efac;background:#f0fdf4}
+.drop.has .ic{background:#dcfce7;color:var(--ok)}
+.field .consent{font-weight:400;margin:0;display:flex;gap:12px;align-items:flex-start;background:#f8fafc;border:1px solid var(--line);border-radius:var(--r);padding:14px;font-size:14px;color:#334155;cursor:pointer}
+.consent input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--blue);flex:none}
+.invalid .consent{border-color:var(--err)}
+.btn{width:100%;height:54px;border:0;border-radius:var(--r);background:var(--blue);color:#fff;font-size:17px;font-weight:700;cursor:pointer;transition:.15s;font-family:inherit}
+.btn:hover{background:var(--blue-d)} .btn:disabled{opacity:.7;cursor:wait}
+.fine{text-align:center;color:var(--muted);font-size:13px;margin:12px 0 0}
+.success{display:none;text-align:center;padding:24px 8px}
+.success .ok{width:68px;height:68px;border-radius:50%;background:#dcfce7;color:var(--ok);display:grid;place-items:center;margin:0 auto 16px;font-size:34px}
+.success h2{font-size:26px}
+.card.done form,.card.done .head{display:none}.card.done .success{display:block}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:760px;margin:0 auto 48px}
+.steps div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.steps b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--blue-l);color:var(--blue);margin-bottom:8px}
+.steps h3{margin:0 0 4px;font-size:16px}.steps p{margin:0;color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px;padding:22px 0;text-align:center}
+@media (max-width:640px){
+ .nav small{display:none}.hero{padding:36px 0 100px}
+ main .card{padding:20px;border-radius:16px;margin-top:-76px}
+ .grid{grid-template-columns:1fr;gap:16px}
+ .steps{grid-template-columns:1fr;padding:0}
+ .inds label{padding:9px 14px;font-size:14px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="brand" href="#" aria-label="AGN Services LLC"><span class="mark">AGN</span><span><b>AGN</b> Services <span class="llc">LLC</span></span></a>
+ <small>Technician Recruitment</small>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <h1>Join the AGN Services Technician Network</h1>
+ <p>Get steady, paid home-service jobs in your area — sent straight to your phone. You set your coverage, we bring the work.</p>
+ <div class="badges"><span>✓ Independent contractors</span><span>✓ Jobs near you</span><span>✓ Fast onboarding</span></div>
+</div></section>
+
+<main class="wrap">
+<div class="card" id="card">
+ <div class="head"><h2>Technician signup</h2><p class="sub">Takes about 3 minutes. All fields are required.</p></div>
+ <form id="signup" novalidate>
+  <div class="grid">
+   <div class="field" data-f="fullName"><label for="fullName">Full name</label><input type="text" id="fullName" autocomplete="name" placeholder="John Smith"><div class="error">Please enter your full name.</div></div>
+   <div class="field" data-f="companyName"><label for="companyName">Company name</label><input type="text" id="companyName" autocomplete="organization" placeholder="Smith Garage Doors"><div class="error">Please enter your company name.</div></div>
+   <div class="field" data-f="phone"><label for="phone">Mobile phone</label><input type="tel" id="phone" inputmode="numeric" autocomplete="tel-national" placeholder="(555) 123-4567"><div class="hint">We'll text job offers to this number.</div><div class="error">Enter a valid 10-digit US mobile number.</div></div>
+   <div class="field" data-f="email"><label for="email">Email address</label><input type="email" id="email" autocomplete="email" placeholder="you@company.com"><div class="error">Enter a valid email address.</div></div>
+
+   <div class="field full" data-f="serviceAreas"><label for="cityInput">Service areas</label>
+    <div class="combo"><div class="box" id="cityBox"><input type="text" id="cityInput" placeholder="Start typing a city, e.g. Denver" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="cityMenu"></div>
+    <div class="menu" id="cityMenu" role="listbox"></div></div>
+    <div class="hint">Add every city you can cover.</div><div class="error">Select at least one service area.</div></div>
+
+   <div class="field full" data-f="industries"><span class="flabel">Industries</span>
+    <div class="inds" id="inds"></div><div class="error">Select at least one industry.</div></div>
+
+   <div class="field" data-f="photoId"><span class="flabel">Photo ID</span>
+    <label class="drop" id="dropId"><input type="file" id="photoId" accept="image/*,.pdf"><span class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M14 10h4M14 14h4M6 16h6"/></svg></span><span><strong>Upload passport or driver's license</strong><small>JPG, PNG or PDF</small></span></label>
+    <div class="error">Please upload a photo ID.</div></div>
+   <div class="field" data-f="w9"><span class="flabel">W-9 form</span>
+    <label class="drop" id="dropW9"><input type="file" id="w9" accept=".pdf,image/*"><span class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><span><strong>Upload completed W-9</strong><small>PDF or image</small></span></label>
+    <div class="error">Please upload your W-9.</div></div>
+
+   <div class="field full" data-f="smsConsent"><label class="consent"><input type="checkbox" id="smsConsent"><span>I agree to receive text messages from AGN Services LLC about job opportunities at the mobile number provided. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</span></label>
+    <div class="error">Please agree to receive job texts to continue.</div></div>
+
+   <div class="full"><button class="btn" type="submit" id="submitBtn">Join the network</button><p class="fine">Your documents are kept confidential and used only for onboarding.</p></div>
+  </div>
+ </form>
+ <div class="success" role="status"><div class="ok">✓</div><h2>Thanks — you're in!</h2><p class="sub" style="max-width:440px;margin:8px auto 0">We received your application. Our team will review your documents and text you at <strong id="okPhone"></strong> as jobs become available in your area.</p></div>
+</div>
+
+<div class="steps">
+ <div><b>1</b><h3>Sign up</h3><p>Tell us your trade and the cities you cover.</p></div>
+ <div><b>2</b><h3>Get verified</h3><p>We review your ID and W-9 quickly.</p></div>
+ <div><b>3</b><h3>Get jobs</h3><p>Receive job offers by text and start earning.</p></div>
+</div>
+</main>
+<footer>© <span id="yr"></span> AGN Services LLC · All rights reserved</footer>
+
+<script>
+/* ============ CONFIG — plug the backend in here ============ */
+/* >>> PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL BETWEEN THE QUOTES (ends in /exec). Empty = demo mode (console.log only). <<< */
+const SUBMIT_URL = "https://script.google.com/macros/s/AKfycby7JiS7ujgR_ayeianE8p9irkHIqoNXLqKufESnHoJX9SIJYCwuT0QCcfuCe12_iqhO/exec";
+/* =========================================================== */
+
+const INDUSTRIES = ["Garage Door Repair","Locksmith","Air Duct Cleaning","Chimney Cleaning","Carpet Cleaning"];
+const US_CITIES = "New York, NY|Los Angeles, CA|Chicago, IL|Houston, TX|Phoenix, AZ|Philadelphia, PA|San Antonio, TX|San Diego, CA|Dallas, TX|Jacksonville, FL|Austin, TX|Fort Worth, TX|San Jose, CA|Columbus, OH|Charlotte, NC|Indianapolis, IN|San Francisco, CA|Seattle, WA|Denver, CO|Oklahoma City, OK|Nashville, TN|Washington, DC|El Paso, TX|Las Vegas, NV|Boston, MA|Detroit, MI|Portland, OR|Louisville, KY|Memphis, TN|Baltimore, MD|Milwaukee, WI|Albuquerque, NM|Tucson, AZ|Fresno, CA|Sacramento, CA|Mesa, AZ|Atlanta, GA|Kansas City, MO|Colorado Springs, CO|Omaha, NE|Raleigh, NC|Miami, FL|Virginia Beach, VA|Long Beach, CA|Oakland, CA|Minneapolis, MN|Bakersfield, CA|Tulsa, OK|Tampa, FL|Arlington, TX|Aurora, CO|Wichita, KS|Cleveland, OH|New Orleans, LA|Henderson, NV|Honolulu, HI|Anaheim, CA|Orlando, FL|Lexington, KY|Stockton, CA|Riverside, CA|Irvine, CA|Corpus Christi, TX|Newark, NJ|Santa Ana, CA|Cincinnati, OH|Pittsburgh, PA|Saint Paul, MN|Greensboro, NC|Jersey City, NJ|Durham, NC|Lincoln, NE|North Las Vegas, NV|Plano, TX|Anchorage, AK|Gilbert, AZ|Madison, WI|Reno, NV|Chandler, AZ|St. Louis, MO|Chula Vista, CA|Buffalo, NY|Fort Wayne, IN|Lubbock, TX|St. Petersburg, FL|Toledo, OH|Laredo, TX|Port St. Lucie, FL|Glendale, AZ|Irving, TX|Winston-Salem, NC|Chesapeake, VA|Garland, TX|Scottsdale, AZ|Boise, ID|Hialeah, FL|Frisco, TX|Richmond, VA|Cape Coral, FL|Norfolk, VA|Spokane, WA|Huntsville, AL|Santa Clarita, CA|Tacoma, WA|Fremont, CA|McKinney, TX|San Bernardino, CA|Baton Rouge, LA|Modesto, CA|Fontana, CA|Salt Lake City, UT|Moreno Valley, CA|Des Moines, IA|Worcester, MA|Yonkers, NY|Fayetteville, NC|Sioux Falls, SD|Grand Prairie, TX|Rochester, NY|Tallahassee, FL|Little Rock, AR|Amarillo, TX|Overland Park, KS|Augusta, GA|Mobile, AL|Oxnard, CA|Grand Rapids, MI|Peoria, AZ|Vancouver, WA|Knoxville, TN|Birmingham, AL|Montgomery, AL|Providence, RI|Huntington Beach, CA|Brownsville, TX|Chattanooga, TN|Fort Lauderdale, FL|Tempe, AZ|Akron, OH|Glendale, CA|Clarksville, TN|Ontario, CA|Newport News, VA|Elk Grove, CA|Cary, NC|Aurora, IL|Salem, OR|Pembroke Pines, FL|Eugene, OR|Santa Rosa, CA|Rancho Cucamonga, CA|Shreveport, LA|Garden Grove, CA|Oceanside, CA|Fort Collins, CO|Springfield, MO|Murfreesboro, TN|Surprise, AZ|Lancaster, CA|Denton, TX|Roseville, CA|Palmdale, CA|Corona, CA|Salinas, CA|Killeen, TX|Paterson, NJ|Alexandria, VA|Hollywood, FL|Hayward, CA|Charleston, SC|Macon, GA|Lakewood, CO|Sunnyvale, CA|Kansas City, KS|Springfield, MA|Bellevue, WA|Naperville, IL|Joliet, IL|Bridgeport, CT|Mesquite, TX|Pasadena, TX|Olathe, KS|Escondido, CA|Savannah, GA|McAllen, TX|Gainesville, FL|Pomona, CA|Rockford, IL|Thornton, CO|Waco, TX|Visalia, CA|Syracuse, NY|Columbia, SC|Midland, TX|Miramar, FL|Palm Bay, FL|Jackson, MS|Coral Springs, FL|Victorville, CA|Elizabeth, NJ|Fullerton, CA|Meridian, ID|Torrance, CA|Stamford, CT|West Valley City, UT|Orange, CA|Cedar Rapids, IA|Warren, MI|Hampton, VA|New Haven, CT|Columbia, MO|Pasadena, CA|Lakeland, FL|Dayton, OH|Lewisville, TX|Westminster, CO|Carrollton, TX|Round Rock, TX|Sterling Heights, MI|Kent, WA|Abilene, TX|Pearland, TX|Athens, GA|Evansville, IN|League City, TX|Fargo, ND|Allentown, PA|Beaumont, TX|Provo, UT|Odessa, TX|Murrieta, CA|Independence, MO|Lansing, MI|Ann Arbor, MI|El Monte, CA|Berkeley, CA|Clearwater, FL|Wilmington, NC|Arvada, CO|Springfield, IL|Peoria, IL|Rochester, MN|Billings, MT|Temecula, CA|Carlsbad, CA|Costa Mesa, CA|Downey, CA|Inglewood, CA|Miami Gardens, FL|Norman, OK|Manchester, NH|West Palm Beach, FL|Waterbury, CT|Elgin, IL|Lowell, MA|Pueblo, CO|Richardson, TX|Broken Arrow, OK|High Point, NC|Centennial, CO|Antioch, CA|Gresham, OR|Davie, FL|Jurupa Valley, CA|Ventura, CA|Everett, WA|Boulder, CO|West Jordan, UT|Vallejo, CA|Santa Maria, CA|Concord, CA|Daly City, CA|Green Bay, WI|Wichita Falls, TX|Burbank, CA|Rialto, CA|Edison, NJ|Tyler, TX|Lakewood, NJ|Sandy Springs, GA|Hillsboro, OR|South Bend, IN|Davenport, IA|Las Cruces, NM|Renton, WA|Vista, CA|Lees Summit, MO|Tuscaloosa, AL|Spokane Valley, WA|Sparks, NV|Kenosha, WI|Woodbridge, NJ|Erie, PA|Yakima, WA|Nampa, ID|Bend, OR|Conroe, TX|New Braunfels, TX|Brockton, MA|Quincy, MA|Lynn, MA|Hartford, CT|Fort Myers, FL|Sugar Land, TX|Albany, NY|Kalamazoo, MI|Flint, MI|Asheville, NC|Greenville, SC|Scranton, PA|Reading, PA|Bethlehem, PA|Harrisburg, PA|Wilmington, DE|Portland, ME|Burlington, VT|Charleston, WV|Cheyenne, WY|Rapid City, SD|Bismarck, ND|Missoula, MT|Idaho Falls, ID|St. George, UT|Ogden, UT|Flagstaff, AZ|Yuma, AZ|Santa Fe, NM|Fayetteville, AR|Fort Smith, AR|Lafayette, LA|Lake Charles, LA|Gulfport, MS|Pensacola, FL|Daytona Beach, FL|Sarasota, FL|Naples, FL|Ocala, FL|Port Orange, FL|Columbus, GA|Hoover, AL|Dothan, AL|Bowling Green, KY|Toms River, NJ|Trenton, NJ|White Plains, NY|Columbia, MD|Frederick, MD|Annapolis, MD|Roanoke, VA|Lynchburg, VA|Springdale, AR|Topeka, KS|Lawrence, KS|Sioux City, IA|Iowa City, IA|Duluth, MN|Bloomington, MN|Champaign, IL|Bloomington, IN|Canton, OH|Youngstown, OH|Lorain, OH|Racine, WI|Appleton, WI".split("|");
+
+const $ = s => document.querySelector(s);
+document.getElementById("yr").textContent = new Date().getFullYear();
+const fieldEl = n => document.querySelector(`[data-f="${n}"]`);
+const setErr = (n, bad) => fieldEl(n).classList.toggle("invalid", !!bad);
+let submitted = false;
+
+/* Phone formatting */
+const phone = $("#phone");
+const digits = v => v.replace(/\D/g,"").replace(/^1(?=\d{10})/,"").slice(0,10);
+const fmt = d => d.length<4 ? (d.length?`(${d}`:"") : d.length<7 ? `(${d.slice(0,3)}) ${d.slice(3)}` : `(${d.slice(0,3)}) ${d.slice(3,6)}-${d.slice(6)}`;
+phone.addEventListener("input", () => { phone.value = fmt(digits(phone.value)); if (submitted) validate(); });
+
+/* Cities combobox */
+const selected = [];
+const cityInput = $("#cityInput"), menu = $("#cityMenu"), box = $("#cityBox");
+let active = 0, matches = [];
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+function renderChips(){
+  box.querySelectorAll(".chip").forEach(c=>c.remove());
+  selected.forEach(c=>{
+    const el=document.createElement("span"); el.className="chip";
+    el.innerHTML=`${esc(c)}<button type="button" aria-label="Remove ${esc(c)}">×</button>`;
+    el.querySelector("button").onclick=e=>{e.stopPropagation();selected.splice(selected.indexOf(c),1);renderChips();if(submitted)validate();};
+    box.insertBefore(el,cityInput);
+  });
+  cityInput.placeholder = selected.length ? "Add another city…" : "Start typing a city, e.g. Denver";
+}
+function renderMenu(){
+  const q = cityInput.value.trim().toLowerCase();
+  if(!q){menu.classList.remove("open");cityInput.setAttribute("aria-expanded","false");return;}
+  const starts=[],contains=[];
+  US_CITIES.forEach(c=>{ if(selected.includes(c))return; const l=c.toLowerCase(); if(l.startsWith(q)) starts.push(c); else if(l.includes(q)) contains.push(c); });
+  matches = starts.concat(contains).slice(0,8); active = 0;
+  menu.innerHTML = matches.length ? matches.map((c,i)=>{const at=c.toLowerCase().indexOf(q);
+    return `<div role="option" data-i="${i}" class="${i===0?"active":""}">${esc(c.slice(0,at))}<mark>${esc(c.slice(at,at+q.length))}</mark>${esc(c.slice(at+q.length))}</div>`}).join("")
+    : `<div class="empty">No matching city</div>`;
+  menu.classList.add("open"); cityInput.setAttribute("aria-expanded","true");
+}
+function pick(c){ if(c && !selected.includes(c)) selected.push(c); cityInput.value=""; renderChips(); renderMenu(); cityInput.focus(); if(submitted)validate(); }
+cityInput.addEventListener("input", renderMenu);
+cityInput.addEventListener("keydown", e=>{
+  const open = menu.classList.contains("open") && matches.length;
+  if(e.key==="ArrowDown"&&open){e.preventDefault();active=(active+1)%matches.length;}
+  else if(e.key==="ArrowUp"&&open){e.preventDefault();active=(active-1+matches.length)%matches.length;}
+  else if(e.key==="Enter"){e.preventDefault(); if(open) pick(matches[active]); return;}
+  else if(e.key==="Escape"){menu.classList.remove("open");return;}
+  else if(e.key==="Backspace"&&!cityInput.value&&selected.length){selected.pop();renderChips();return;}
+  else return;
+  menu.querySelectorAll("[role=option]").forEach((d,i)=>d.classList.toggle("active",i===active));
+  menu.children[active]?.scrollIntoView({block:"nearest"});
+});
+menu.addEventListener("mousedown", e=>{ const d=e.target.closest("[data-i]"); if(d){e.preventDefault();pick(matches[+d.dataset.i]);} });
+box.addEventListener("click", ()=>cityInput.focus());
+document.addEventListener("click", e=>{ if(!e.target.closest(".combo")) menu.classList.remove("open"); });
+
+/* Industries */
+$("#inds").innerHTML = INDUSTRIES.map(i=>`<label><input type="checkbox" name="industries" value="${i}"><span class="tick"></span>${i}</label>`).join("");
+$("#inds").addEventListener("change", ()=>{ if(submitted)validate(); });
+
+/* Files */
+[["photoId","dropId"],["w9","dropW9"]].forEach(([id,dz])=>{
+  const inp=document.getElementById(id), d=document.getElementById(dz), small=d.querySelector("small"), orig=small.textContent;
+  inp.addEventListener("change",()=>{ const f=inp.files[0]; d.classList.toggle("has",!!f);
+    small.textContent = f ? `${f.name} · ${(f.size/1024/1024).toFixed(2)} MB` : orig; if(submitted)validate(); });
+  ["dragenter","dragover"].forEach(ev=>d.addEventListener(ev,()=>d.classList.add("drag")));
+  ["dragleave","drop"].forEach(ev=>d.addEventListener(ev,()=>d.classList.remove("drag")));
+});
+
+/* Validation */
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function validate(){
+  const r = {
+    fullName: $("#fullName").value.trim().length < 2,
+    companyName: !$("#companyName").value.trim(),
+    phone: digits(phone.value).length !== 10,
+    email: !emailRe.test($("#email").value.trim()),
+    serviceAreas: !selected.length,
+    industries: !document.querySelectorAll("#inds input:checked").length,
+    photoId: !$("#photoId").files.length,
+    w9: !$("#w9").files.length,
+    smsConsent: !$("#smsConsent").checked
+  };
+  Object.entries(r).forEach(([k,v])=>setErr(k,v));
+  return Object.keys(r).filter(k=>r[k]);
+}
+document.querySelectorAll("#signup input").forEach(i=>i.addEventListener(i.type==="checkbox"?"change":"input",()=>{ if(submitted) validate(); }));
+["fullName","companyName","email"].forEach(id=>document.getElementById(id).addEventListener("blur",()=>{ if(submitted) validate(); }));
+
+/* Payload + submit */
+function buildPayload(){
+  return {
+    fullName: $("#fullName").value.trim(),
+    companyName: $("#companyName").value.trim(),
+    phone: phone.value, phoneE164: "+1" + digits(phone.value),
+    email: $("#email").value.trim().toLowerCase(),
+    serviceAreas: [...selected],
+    industries: [...document.querySelectorAll("#inds input:checked")].map(i=>i.value),
+    photoId: $("#photoId").files[0],
+    w9: $("#w9").files[0],
+    smsConsent: true,
+    smsConsentText: document.querySelector(".consent span").textContent.trim(),
+    submittedAt: new Date().toISOString(),
+    userAgent: navigator.userAgent
+  };
+}
+const MAX_FILE_MB = 10;
+function fileToB64(f){
+  return new Promise((ok,no)=>{ const r=new FileReader();
+    r.onload=()=>{ const u=String(r.result); ok({name:f.name, type:f.type||"application/octet-stream", size:f.size, data:u.slice(u.indexOf(",")+1)}); };
+    r.onerror=()=>no(r.error||new Error("File read failed")); r.readAsDataURL(f); });
+}
+$("#signup").addEventListener("submit", async e=>{
+  e.preventDefault(); submitted = true;
+  const bad = validate();
+  if(bad.length){ const f=fieldEl(bad[0]); f.scrollIntoView({behavior:"smooth",block:"center"}); f.querySelector("input")?.focus({preventScroll:true}); return; }
+  const payload = buildPayload();
+  for(const [k,label] of [["photoId","Photo ID"],["w9","W-9"]]){
+    if(payload[k] && payload[k].size > MAX_FILE_MB*1024*1024){
+      alert(`Your ${label} file is larger than ${MAX_FILE_MB} MB. Please upload a smaller file (a phone photo or compressed PDF works well).`);
+      const f=fieldEl(k); f.scrollIntoView({behavior:"smooth",block:"center"}); return;
+    }
+  }
+  const btn = $("#submitBtn"); btn.disabled = true; btn.textContent = "Submitting…"; btn.setAttribute("aria-busy","true");
+  try{
+    const body = {...payload, photoId: await fileToB64(payload.photoId), w9: await fileToB64(payload.w9)};
+    if(SUBMIT_URL){
+      const res = await fetch(SUBMIT_URL, { method:"POST", headers:{"Content-Type":"text/plain;charset=utf-8"}, body: JSON.stringify(body), redirect:"follow" });
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      const j = await res.json().catch(()=>null);
+      if(!j || j.ok !== true) throw new Error((j && j.error) || "Unexpected response");
+    } else {
+      console.log("AGN signup payload (demo mode, SUBMIT_URL empty):", {...body, photoId:{...body.photoId,data:"…"}, w9:{...body.w9,data:"…"}});
+    }
+    $("#okPhone").textContent = payload.phone;
+    $("#card").classList.add("done");
+    $("#card").scrollIntoView({behavior:"smooth",block:"start"});
+  }catch(err){
+    console.error(err); alert("Sorry, we couldn't submit your application just now. Please check your connection and try again. If it keeps happening, call or text us.");
+    btn.disabled = false; btn.textContent = "Join the network"; btn.removeAttribute("aria-busy");
+  }
+});
+</script>
+</body>
+</html>
